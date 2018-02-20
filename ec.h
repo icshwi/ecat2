@@ -55,6 +55,7 @@
 
 #include <devLib.h>
 #include <devSup.h>
+#include <drvSup.h>
 #include <epicsThread.h>
 #include <epicsMutex.h>
 #include <epicsEvent.h>
@@ -86,7 +87,7 @@
 
 #include <time.h>
 
-#include "ecrt.h"
+#include <ecrt.h>
 
 #include "eccommon.h"
 

@@ -773,7 +773,6 @@ epicsExportRegistrar( drvethercat2_registrar );
 
 
 
-
 struct {
     long number;
     long (*report) ();
@@ -785,6 +784,7 @@ struct {
 };
 
 
+epicsExportAddress(drvet, drvecat2);
 
 
 
