@@ -30,7 +30,9 @@
 #ifndef EC_H
 #define EC_H
 
-#define _GNU_SOURCE
+#ifndef _GNU_SOURCE
+# define _GNU_SOURCE
+#endif
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -77,7 +79,10 @@
 #include <aaiRecord.h>
 #include <aaoRecord.h>
 #include <initHooks.h>
+
+
 #define HAVE_VME
+
 #include <epicsTypes.h>
 #include <epicsThread.h>
 #include <epicsExit.h>
