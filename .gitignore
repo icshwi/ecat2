@@ -5,3 +5,4 @@ core.*
 \#*
 *-debug
 *-dev
+.*project
