@@ -1,12 +1,20 @@
-# ecat2-ess
+# ecat2-ess 
 
 This is the repository for ESS customized PSI ecat2. Due to many issues, we re-start them with some reasonable and traceable history in order to find the ground zero for ESS.
+
+
+# Warning
+The directory has the generic EPICS compilation structure, however, we don't add real information in configure files, and Makefile. We have a plan to add them later.
+
 
 # History
 
 * forked and gave Release number according to commit history
 * created and marked PSI_ae68db8
 * copied all changes into PSI_ae68db8, and created ess-2-1-2
+* built EPICS APP directory structure instead of flat one
+* copied all available DB, tempalte, substitutions files from [2], please see README.md in Db
+* 
 
 
 # Future maintenance issues
@@ -93,5 +101,8 @@ tag:         tip
 user:        Florian Pose
 date:        Tue Feb 13 17:16:01 2018 +0100
 summary:     Fixed scheduler settings in dc_user example; use CLOCK_MONOTONIC.
+
+[2] f7993ed 2018-01-23 
+https://bitbucket.org/europeanspallationsource/m-epics-ecat2db
 ```
 
