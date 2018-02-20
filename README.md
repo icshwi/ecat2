@@ -6,6 +6,8 @@ This is the repository for ESS customized PSI ecat2. Due to many issues, we re-s
 # Warning
 The directory has the generic EPICS compilation structure, however, we don't add real information in configure files, and Makefile. We have a plan to add them later.
 
+The ecat2 and ecat2db within E3+ are realized with https://github.com/icshwi/e3-ecat2
+
 
 # History
 
