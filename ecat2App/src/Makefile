@@ -11,6 +11,16 @@ include $(TOP)/configure/CONFIG
 PROD_IOC = ecat2
 # ecat2.dbd will be created and installed
 DBD += ecat2.dbd
+DBD += drvethercat.dbd
+
+
+ecat2_SRCS += devethercat.c
+ecat2_SRCS += drvethercat.c
+ecat2_SRCS += eccfg.c
+ecat2_SRCS += ecengine.c
+ecat2_SRCS += ecnode.c
+ecat2_SRCS += ectimer.c
+ecat2_SRCS += ectools.c
 
 # ecat2.dbd will be made up from these files:
 ecat2_DBD += base.dbd
@@ -35,6 +45,7 @@ ecat2_SRCS_vxWorks += -nil-
 ecat2_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 #===========================
+
 
 include $(TOP)/configure/RULES
 #----------------------------------------
