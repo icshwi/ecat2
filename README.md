@@ -103,8 +103,8 @@ tag:         tip
 user:        Florian Pose
 date:        Tue Feb 13 17:16:01 2018 +0100
 summary:     Fixed scheduler settings in dc_user example; use CLOCK_MONOTONIC.
-
-[2] f7993ed 2018-01-23 
-https://bitbucket.org/europeanspallationsource/m-epics-ecat2db
 ```
+[2] f7993ed 2018-01-23
+https://bitbucket.org/europeanspallationsource/m-epics-ecat2db
+
 
