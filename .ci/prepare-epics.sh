@@ -63,25 +63,25 @@ fi
 
 # EPICS_HOST_ARCH=`sh $EPICS_BASE/startup/EpicsHostArch`
 
-# CDIR="$HOME/.cache/asyn"
+CDIR="$HOME/.cache/ecatmaster"
 
-# if [ ! -e "$CDIR/built" ]
-# then
-#   install -d "$CDIR"
+if [ ! -e "$CDIR/built" ]
+then
+  install -d "$CDIR"
 
-#   ( cd "$CDIR" && git clone --depth 50 --branch master https://github.com/epics-modules/asyn.git asyn )
+  ( cd "$CDIR" && git clone --depth 50 --branch stable-1.5 https://github.com/icshwi/ecatmaster ecatmaster )
 
-#   ASYN="$CDIR/asyn"
-
-#   echo "EPICS_BASE=$EPICS_BASE" >  ${ASYN}/configure/RELEASE
-#   echo "CHECK_RELEASE = YES"    >  ${ASYN}/configure/CONFIG_SITE
-#   echo "LINUX_GPIB=NO"          >> ${ASYN}/configure/CONFIG_SITE
-#   echo "DRV_USBTMC=YES"         >> ${ASYN}/configure/CONFIG_SITE
-
-#   make -C "$ASYN" -j2
-
-#   touch "$CDIR/built"
-# fi
+  ECATMASTER="$CDIR/ecatmaster"
+  pushd ${ECATMASTER}
+  touch ChangeLog
+  autoreconf --force --install -v
+  ./configure --disable-8139too
+  sudo make install clean
+  popd
+  
+  touch "$CDIR/built"
+ 
+fi
 
 
 
