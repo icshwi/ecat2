@@ -7,7 +7,7 @@ env:
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y autoconf automake libtool graphviz hg
+  - sudo apt-get install -y autoconf automake libtool graphviz  mercurial
   
 install:
  - ./.ci/prepare-epics.sh
