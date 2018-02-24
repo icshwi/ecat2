@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e -x
 
 # Build Base for use with https://travis-ci.org
@@ -84,37 +84,8 @@ then
 fi
 
 
+EPICS_HOST_ARCH=`sh $EPICS_BASE/startup/EpicsHostArch`
 
-# EPICS_HOST_ARCH=`sh $EPICS_BASE/startup/EpicsHostArch`
-
-# CDIR="$HOME/.cache/stream"
-
-# if [ ! -e "$CDIR/built" ]
-# then
-#   install -d "$CDIR"
-
-#   ( cd "$CDIR" && git clone --recursive --depth 50 --branch master https://github.com/epics-modules/stream.git stream )
-
-#   STREAM="$CDIR/stream"
-
-#   echo "ASYN=$ASYN"              >  ${STREAM}/configure/RELEASE
-#   echo "EPICS_BASE=$EPICS_BASE" >>  ${STREAM}/configure/RELEASE
-#   echo "CHECK_RELEASE = YES"    >  ${STREAM}/configure/CONFIG_SITE
-#   echo "BUILD_PCRE=NO"          >> ${STREAM}/configure/CONFIG_SITE
- 
- 
-#   make -C "$STREAM"
-
-#   touch "$CDIR/built"
-# fi
-
-
-
-
-# EPICS_HOST_ARCH=`sh $EPICS_BASE/startup/EpicsHostArch`
-
-# cat << EOF > configure/RELEASE.local
-# EPICS_BASE=$EPICS_BASE
-# ASYN=${ASYN}
-# STREAM=${STREAM}
-# EOF
+cat << EOF > configure/RELEASE.local
+EPICS_BASE=$EPICS_BASE
+EOF

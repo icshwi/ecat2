@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 set -e -x
 
-# [ "$BASE" ] || exit 0
+[ "$BASE" ] || exit 0
 
-# make $EXTRA
+make $EXTRA
 
