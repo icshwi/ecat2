@@ -1,10 +1,16 @@
+ESS Customized PSI EtherCAT Driver for EPICS
+---
+[![Build Status](https://travis-ci.org/icshwi/ecat2-ess.svg?branch=master)](https://travis-ci.org/icshwi/ecat2-ess)
+
 # ecat2-ess 
 
 This is the repository for ESS customized PSI ecat2. Due to many issues, we re-start them with some reasonable and traceable history in order to find the ground zero for ESS.
 
 
 # Warning
-The directory has the generic EPICS compilation structure, however, we don't add real information in configure files, and Makefile. We have a plan to add them later.
+The directory has the generic EPICS compilation structure, however, we don't test them with real HW. The current compiliation is OK. 
+
+# Realization for E3 and E3+
 
 The ecat2 and ecat2db within E3+ are realized with https://github.com/icshwi/e3-ecat2
 
@@ -16,7 +22,6 @@ The ecat2 and ecat2db within E3+ are realized with https://github.com/icshwi/e3-
 * copied all changes into PSI_ae68db8, and created ess-2-1-2
 * built EPICS APP directory structure instead of flat one
 * copied all available DB, tempalte, substitutions files from [2], please see README.md in Db
-* 
 
 
 # Future maintenance issues
@@ -89,10 +94,11 @@ ecat2-ess ((PSI_ae68db8))$ diff ../../ecat_setup/etherlabmaster-code/include/ecr
 > 
 ```
 
-ESS would like to have separated patch files for Etherlab EtherCAT master, so we would like to drop that change in ecat2 respository here.  
+ESS would like to have separated patch files for Etherlab EtherCAT master, so we would like to drop that change in ecat2 respository here. Note that for travis ci, the minimal patch file is located patch/PSI directory.  
 
 
-# Reference 
+
+# References 
 
 
 [1] Date :Tuesday, February 20 13:58:31 CET 2018
