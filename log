@@ -1,0 +1,55 @@
+
+```
+diff m-epics-ecat2ceadb/db/ecat2el10xx.template m-epics-ecat2db/db/ecat2el10xxel11xxDI.template 
+7c7
+< record(bi, "$(SECTION)-$(SUBSECTION):$(DISC)-$(DEVICE):$(SIGNAL)")
+---
+> record(bi, "$(PREFIX):$(CH_ID)")
+
+
+b$ diff m-epics-ecat2ceadb/db/ecat2el250x.template m-epics-ecat2db/db/ecat2el250x.template 
+7c7
+< record(ao, "$(SECTION)-$(SUBSECTION):$(DISC)-$(DEVICE):$(SIGNAL)")
+---
+> record(ao, "$(PREFIX):$(CH_ID)")
+13c13
+<       field(ESLO, "$(ESLO=0.003051850947599719)")
+---
+>       field(ESLO, "0.003051850947599719")
+15c15
+<       field(EGU,  "$(EGU=%)")
+---
+>       field(EGU,  "%")
+
+
+diff m-epics-ecat2ceadb/db/ecat2el26xx.template  m-epics-ecat2db/db/ecat2el20xxel2124DO.template 
+7c7
+< record(bo, "$(SECTION)-$(SUBSECTION):$(DISC)-$(DEVICE):$(SIGNAL)")
+---
+> record(bo, "$(PREFIX):$(CH_ID)")
+14d13
+<   field(HIGH, "$(HIGH=0)")
+
+
+
+ ls m-epics-ecat2ceadb/db/ecat2el3*
+m-epics-ecat2ceadb/db/ecat2el31xx.template  m-epics-ecat2ceadb/db/ecat2el320x.template
+
+
+ls m-epics-ecat2db/db/ecat2el3*.template
+m-epics-ecat2db/db/ecat2el316x.template  m-epics-ecat2db/db/ecat2el321x.template
+m-epics-ecat2db/db/ecat2el3208.template  m-epics-ecat2db/db/ecat2el360xel320x.template
+
+
+ ls m-epics-ecat2ceadb/db/ecat2el413x*
+m-epics-ecat2ceadb/db/ecat2el413xLINEAR.template  m-epics-ecat2ceadb/db/ecat2el413x.template
+
+
+ diff m-epics-ecat2ceadb/db/ecat2el413x.template  m-epics-ecat2db/db/ecat2el41xx.template 
+8c8
+< record(ao, "$(SECTION)-$(SUBSECTION):$(DISC)-$(DEVICE):$(SIGNAL)")
+---
+> record(ao, "$(PREFIX):$(CH_ID)")
+10c10
+
+```

@@ -6,3 +6,8 @@ core.*
 *-debug
 *-dev
 .*project
+bin
+db
+dbd
+O.*
+envPaths
